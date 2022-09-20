@@ -64,4 +64,5 @@ export interface DailyReportForm {
     uid: string;
     created: number;
     id: number;
+    sfzgn: string;
 }
