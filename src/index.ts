@@ -68,6 +68,10 @@ async function getDailyReportFormData(
     if (response.body.indexOf("登录") != -1) {
         throw new Error("登录失败；请检查用户名与密码是否正确");
     }
+       
+    console.log("昨日信息：");
+    console.log(response.body);
+        
     const newForm: DailyReportForm = JSON.parse(
         /var def = (\{.+\});/.exec(response.body)?.[1] ?? ""
     );
